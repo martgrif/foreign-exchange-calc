@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Foreign Currency Converter Mini-App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+        
+        
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <nav class="top-bar" data-topbar role="navigation">
+                    
+                    <ul class="title-area">
+                        <li class="name">
+                        <h1><a href="#">Currency Converter</a></h1>
+                        </li>
+                        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                    </ul>
+                    
+                     <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                          <li class="active"><a href="https://martgrif.github.io">Works</a></li>
+                          <li><a href="https://github.com/martgrif">Github Profile</a></li>
+                          <li><a href="mailto:prodev.mg@gmail.com">Inquire Availability</a></li>
+                        </ul>
+
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                
+                <article class"">
+                    <h3>Exchange Rate Calculator</h3>
+                    <div>
+                        <select id="fromCurrency" onchange="window.calcobj.recalculateRate()" class="">
+                      </select>
+                    </div>
+                    <div class="input-group">
+                      <input id="field1" type="text" class="form-control" placeholder="First Selection" aria-describedby="sizing-addon2" onkeyup="window.calcobj.calculateRate(1)">
+                    </div>
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                          <label for="reverseCalculationCheckbox">reverse calculation?</label>
+                        <input id="reverseCalculationCheckbox" name="reverseCalculationCheckbox" type="checkbox" aria-label="reverse calculation?" onchange="window.calcobj.reverseCurrency()">
+                      </span>
+                    </div><!-- /input-group -->
+                    <div class="input-group">
+                      <input id="field2" type="text" class="form-control" placeholder="Other Selection" aria-describedby="sizing-addon3" onkeyup="window.calcobj.calculateRate(2)">
+                    </div>
+                    <div>
+                        <select id="toCurrency" onchange="window.calcobj.recalculateRate()"  class="">
+                      </select>
+                    </div>
+                </article>
+
+                <aside>
+                    <header>
+                        <h3>Embeddable Forex Calculator</h3>
+                        <p>Enter your values to convert. 165 currencies available including bitcoin. Exchange rates are accurate by the second.</p>
+                </aside>
+
+                
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3><a href="http://martgrif.github.io">martgrif.github.io</a></h3>
+            </footer>
+        </div>
+        
+        <script src="js/convert.js"></script>
+        <script src="js/main.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
